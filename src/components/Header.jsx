@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <nav>
             <div>
-                <Link>MOVIES</Link>
+                <Link to="/">MOVIES</Link>
             </div>
         </nav>
     )
