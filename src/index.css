@@ -1,0 +1,26 @@
+/* REGOLE GENERALI  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.nav {
+    background-color: rgb(221, 204, 231);
+    height: 50px;
+}
+
+.container {
+    text-align: center;
+}
+
+.link {
+    color: white;
+    font-size: 40px;
+}
+
+
+/* MAIN */

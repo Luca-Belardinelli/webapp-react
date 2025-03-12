@@ -5,9 +5,9 @@ import { Link } from "react-router-dom"
 const Header = () => {
 
     return (
-        <nav>
-            <div>
-                <Link to="/">MOVIES</Link>
+        <nav className="nav">
+            <div className="container">
+                <Link className="link" to="/">MOVIES</Link>
             </div>
         </nav>
     )

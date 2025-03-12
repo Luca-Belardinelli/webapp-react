@@ -42,7 +42,7 @@ const Homepage = () => {
 
     return (
         <>
-            <h1>MOVIES</h1>
+            <h1 className='title'>MOVIES</h1>
             <h2>Film in evidenza</h2>
 
             <div>
