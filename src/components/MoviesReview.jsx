@@ -1,9 +1,13 @@
-export default function MovieReview() {
+export default function MovieReview({ reviewProp }) {
+    // DESTRUTTURO PROP
+    const { name, text, vote } = reviewProp
     return (
         <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <strong> Vote: 5</strong>
-            <address>Giovanni</address>
-        </div>
+            <div>
+                <p> {text}</p>
+                <strong> Vote: {vote}</strong>
+                <address> By {name}</address>
+            </div>
+        </div >
     );
 }

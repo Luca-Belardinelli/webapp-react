@@ -24,7 +24,8 @@ const Moviespage = () => {
         axios.get("http://localhost:3000/api/movies/" + id)
             .then(
                 res => {
-                    console.log(res.data)
+                    // console.log(res.data)
+                    setMovie(res.data)
                 }
             )
 
@@ -36,13 +37,21 @@ const Moviespage = () => {
     //CHIAMATA API AL MONTAGGIO COMPONENTE
     useEffect(fetchmovie, [])
 
+    // RENDERING REVIEW
+    const renderReviews = () => {
+        return movie.reviews?.map(
+            review => <MoviesReview key={review.id} reviewProp={review} />
+        )
+    }
+
+
     return (
         <>
             <div>
                 <img src={movie.image} alt="" />
                 <div>
                     <h1>{movie.title}</h1>
-                    <h3 className="text-muted"><i>By {movie.author}</i></h3>
+                    <h3 className="text-muted"><i>By {movie.director}</i></h3>
                     <p>{movie.abstract}</p>
                 </div>
             </div>
@@ -50,7 +59,7 @@ const Moviespage = () => {
             <div>
                 <h3>community reviews</h3>
                 {/* reviews */}
-                <MoviesReview />
+                {renderReviews()}
             </div>
 
             <div>
