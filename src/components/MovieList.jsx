@@ -5,14 +5,14 @@ export default function MovieListCard({ movieProp }) {
     //DESTRUTTURIAMO OGGETTO PROPS
     const { id, title, director, genre, release_year, abstract, image } = movieProp;
     return (
-        <div >
-            {image}
-            <div >
-                <h5 >{title}</h5>
+        <div className="containermoviecard" >
+            <img src={image} alt="" />
+            <div className="card">
+                <h5>{title}</h5>
                 <address><i>{director}</i></address>
                 <p>{abstract}</p>
                 <p>{genre} , {release_year}</p>
-                <Link to="movies/2">Dettagli</Link>
+                <Link to={`movies/${id}`}>More</Link>
             </div>
         </div>
 
