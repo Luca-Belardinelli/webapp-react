@@ -9,7 +9,7 @@ export default function MovieListCard() {
         <div >
             <h5 >Tre Uomini e una gamba</h5>
 
-            <img src="" alt="" />
+            <img src alt="" />
             <address><i>By nome autore</i></address>
 
             <div >

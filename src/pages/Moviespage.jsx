@@ -2,18 +2,14 @@
 
 import { Link } from "react-router-dom"
 
-
-
 import MoviesReview from "../components/MoviesReview"
-
-
 
 
 const Moviespage = () => {
     return (
         <>
             <div>
-                <img className="img_detail" src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
+                <img src alt="" />
                 <h2>Titolo FIlm</h2>
                 <span>Autore</span>
                 <p>ciao ciao ciao ciao ciao ciao</p>
