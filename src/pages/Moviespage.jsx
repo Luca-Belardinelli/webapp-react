@@ -2,10 +2,18 @@
 
 import { Link } from "react-router-dom"
 
+
+
+import MoviesReview from "../components/MoviesReview"
+
+
+
+
 const Moviespage = () => {
     return (
         <>
             <div>
+                <img className="img_detail" src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
                 <h2>Titolo FIlm</h2>
                 <span>Autore</span>
                 <p>ciao ciao ciao ciao ciao ciao</p>
@@ -14,7 +22,9 @@ const Moviespage = () => {
             <div>
                 <h3>community reviews</h3>
                 {/* reviews */}
-                <p>reviews</p>
+                <MoviesReview />
+                <MoviesReview />
+                <MoviesReview />
             </div>
 
             <div>

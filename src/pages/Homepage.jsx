@@ -1,16 +1,30 @@
-
+import MovieList from "../components/MovieList"
 
 const Homepage = () => {
 
     return (
 
-        <>
-            <h1>Movies For You</h1>
-            <h2>Seleziona un film</h2>
+        <main>
             <div>
-                <p> QUI CI SARANNO I FILM</p>
+                <section>
+                    <h2> MOVIES</h2>
+                    <span> Film in evidenza</span>
+                </section>
+
+
+
+                {/* Listato */}
+                <section>
+                    <MovieList />
+                    <MovieList />
+                    <MovieList />
+                    <MovieList />
+                    <MovieList />
+                </section>
+
             </div>
-        </>
+
+        </main>
     )
 }
 
