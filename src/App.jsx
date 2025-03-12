@@ -1,6 +1,8 @@
 // IMPORTO LE PAGINE
 import Homepage from "./pages/Homepage";
 import Moviespage from "./pages/Moviespage";
+import NotFoundPage from "./pages/NotFoundPage";
+
 
 
 // IMPORTO IL LAYOUT
@@ -18,6 +20,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route index path="/" element={<Homepage />} />
             <Route path="/movies/:id" element={<Moviespage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

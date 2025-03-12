@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useState, useEffect } from "react"
 
 // IMPORTIAMO IL LINK DEL MODULO REACT-ROUTER
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 
 //COMPONENTE 
 import MoviesReview from "../components/MoviesReview"
@@ -15,6 +15,9 @@ const Moviespage = () => {
 
     // RECUPERIAMO ID MOVIE RICHIESTO
     const { id } = useParams();
+
+    // USO  useNavigate
+    const redirect = useNavigate();
 
     //SETTO LO STATO DEL COMPONENTE
     const [movie, setMovie] = useState({});
@@ -31,6 +34,7 @@ const Moviespage = () => {
 
             .catch(err => {
                 console.log(err);
+                if (err.status === 404) redirect("/404")
             })
     }
 
