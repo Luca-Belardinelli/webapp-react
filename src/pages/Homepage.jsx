@@ -1,30 +1,55 @@
+// AXIOS
+import axios from 'axios'
+
+// USO USESTATE USEEFFECT
+import { useState, useEffect } from "react"
+
+// COMPONENTE List
 import MovieList from "../components/MovieList"
 
 const Homepage = () => {
 
+    // SETTIAMO STATO COMPONENTE
+    const [movies, setMovies] = useState([]);
+
+    // FUNZIONE DI FEtCHING DATI LISTA MOVIES
+    const fectMovies = () => {
+        axios.get("http://localhost:3000/api/movies")
+            .then(
+                res => {
+                    // console.log(res.data)
+                    setMovies(res.data)
+                }
+            )
+            .catch(err => console.log(err))
+    }
+
+    // fectMovies();
+    useEffect(fectMovies, [])
+
+    // FUNZIONE RENDERING MOVIES
+    const renderMovies = () => {
+        return movies.map(
+            movie => {
+                return (
+                    <div key={movie.id}>
+                        <MovieList movieProp={movie} />
+                    </div>
+                )
+            }
+        )
+    }
+
     return (
+        <>
+            <h1>MOVIES</h1>
+            <h2>Film in evidenza</h2>
 
-        <main>
             <div>
-                <section>
-                    <h2> MOVIES</h2>
-                    <span> Film in evidenza</span>
-                </section>
-
-
-
                 {/* Listato */}
-                <section>
-                    <MovieList />
-                    <MovieList />
-                    <MovieList />
-                    <MovieList />
-                    <MovieList />
-                </section>
-
+                {renderMovies()}
             </div>
-
-        </main>
+        </>
     )
 }
 

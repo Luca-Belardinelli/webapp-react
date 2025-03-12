@@ -9,7 +9,7 @@ const Moviespage = () => {
     return (
         <>
             <div>
-                <img src alt="" />
+
                 <h2>Titolo FIlm</h2>
                 <span>Autore</span>
                 <p>ciao ciao ciao ciao ciao ciao</p>
