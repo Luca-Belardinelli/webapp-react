@@ -50,26 +50,28 @@ const Moviespage = () => {
 
 
     return (
-        <>
-            <div>
-                <img src={movie.image} alt="" />
+        <main>
+            <div className="information">
+                <div >
+                    <img src={movie.image} alt="" />
+                    <div>
+                        <h1>{movie.title}</h1>
+                        <h3 className="text-muted"><i>By {movie.director}</i></h3>
+                        <p>{movie.abstract}</p>
+                    </div>
+                </div>
+
+                <div className='votes'>
+                    <h3>community reviews</h3>
+                    {/* reviews */}
+                    {renderReviews()}
+                </div>
+
                 <div>
-                    <h1>{movie.title}</h1>
-                    <h3 className="text-muted"><i>By {movie.director}</i></h3>
-                    <p>{movie.abstract}</p>
+                    <Link to="/">Back to home</Link>
                 </div>
             </div>
-
-            <div>
-                <h3>community reviews</h3>
-                {/* reviews */}
-                {renderReviews()}
-            </div>
-
-            <div>
-                <Link to="/">Back to home</Link>
-            </div>
-        </>
+        </main>
     )
 }
 

@@ -42,10 +42,9 @@ const Homepage = () => {
 
     return (
         <>
-            <h1 className='title'>MOVIES</h1>
-            <h2>Film in evidenza</h2>
+            <h2 className='secondtitle'>Film in evidenza</h2>
 
-            <div>
+            <div className='containercard'>
                 {/* Listato */}
                 {renderMovies()}
             </div>
