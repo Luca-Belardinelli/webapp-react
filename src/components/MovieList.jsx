@@ -16,7 +16,7 @@ export default function MovieListCard() {
                 <p>
                 </p>
 
-                <Link to="/movies/:id">Dettagli</Link>
+                <Link to="movies/2">Dettagli</Link>
             </div>
 
 
