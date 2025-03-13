@@ -70,7 +70,7 @@ const Moviespage = () => {
                     {renderReviews()}
                 </div>
 
-                <div>
+                <div className='form'>
                     <ReviewForm />
                 </div>
             </div>
