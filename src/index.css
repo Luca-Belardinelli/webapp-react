@@ -47,11 +47,3 @@ body {
 }
 
 /* PAGE INFORMAZIONI */
-
-.information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding-top: 50px;
-}

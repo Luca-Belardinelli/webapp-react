@@ -10,6 +10,9 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 //COMPONENTE 
 import MoviesReview from "../components/MoviesReview"
 
+//COMPONENTE  Form
+import ReviewForm from "../components/ReviewForm"
+
 
 const Moviespage = () => {
 
@@ -68,7 +71,7 @@ const Moviespage = () => {
                 </div>
 
                 <div>
-                    <Link to="/">Back to home</Link>
+                    <ReviewForm />
                 </div>
             </div>
         </main>
