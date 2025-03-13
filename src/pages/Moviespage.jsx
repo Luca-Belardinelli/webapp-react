@@ -71,7 +71,7 @@ const Moviespage = () => {
                 </div>
 
                 <div className='form'>
-                    <ReviewForm />
+                    <ReviewForm movie_id={movie.id} />
                 </div>
             </div>
         </main>
