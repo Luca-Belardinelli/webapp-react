@@ -2,6 +2,8 @@
 import Homepage from "./pages/Homepage";
 import Moviespage from "./pages/Moviespage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CreateMoviePage from "./pages/CreateMoviePage";
+
 
 
 
@@ -21,6 +23,7 @@ function App() {
             <Route index path="/" element={<Homepage />} />
             <Route path="/movies/:id" element={<Moviespage />} />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/movies/create" element={<CreateMoviePage />} />
           </Route>
         </Routes>
       </BrowserRouter>
